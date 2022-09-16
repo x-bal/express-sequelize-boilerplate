@@ -10,7 +10,9 @@ module.exports = (sequelize, DataTypes) => {
   };
   StudentCourse.init({
     student_id: DataTypes.INTEGER,
-    course_id: DataTypes.INTEGER
+    course_id: DataTypes.INTEGER,
+    nilai: DataTypes.INTEGER,
+    grade : DataTypes.ENUM("A","B","C","D","E")
   }, {
     sequelize,
     modelName: 'StudentCourse',

@@ -14,7 +14,12 @@ module.exports = {
           [{ model: Student, as: 'students' }, 'createdAt', 'DESC'],
         ],
       })
-      .then((classrooms) => res.status(200).send(classrooms))
+      .then((classrooms) => {
+
+        console.log(req)
+
+        res.status(200).send(classrooms)
+      })
       .catch((error) => { res.status(400).send(error); });
   },
 

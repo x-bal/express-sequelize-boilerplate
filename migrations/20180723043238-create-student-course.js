@@ -14,6 +14,12 @@ module.exports = {
       course_id: {
         type: Sequelize.INTEGER
       },
+      nilai : {
+        type : Sequelize.INTEGER
+      },
+      grade : {
+        type : Sequelize.DataTypes.ENUM("A","B","C","D","E")
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
